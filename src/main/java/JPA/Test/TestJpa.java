@@ -13,7 +13,7 @@ public class TestJpa {
         //JPQLextraireTitre();
         //JPQLextraireAuteur();
         //deleteLivre();
-        allLivres();
+        //allLivres();
     }
 
     public static void searchLivre() {
