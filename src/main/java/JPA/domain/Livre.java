@@ -1,10 +1,12 @@
 package JPA.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name = "LIVRE")
-public class Livre {
+public class Livre implements Serializable {
 
     public Livre() { }
 
@@ -17,6 +19,13 @@ public class Livre {
 
     @Column(name = "AUTEUR")
     private String auteur;
+
+    @ManyToMany
+    @JoinTable(name = "COMPO",
+            joinColumns = @JoinColumn(name = "ID_LIV", referencedColumnName = "ID"),
+            inverseJoinColumns = @JoinColumn(name = "ID_EMP", referencedColumnName = "ID")
+    )
+    private Set<Emprunt> empruntSet;
 
     public Integer getId() {
         return id;

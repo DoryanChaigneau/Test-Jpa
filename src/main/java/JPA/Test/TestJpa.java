@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class TestJpa {
 
     public static void main(String[] args) {
-        //searchLivre();
+        searchLivre();
         //addLivre();
         //modifyLivre();
         //JPQLextraireTitre();
